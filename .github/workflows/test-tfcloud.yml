@@ -14,8 +14,11 @@ jobs:
 
       - name: Use branch workspace
         uses: dflook/terraform-new-workspace@v1
-        env:
-          TERRAFORM_CLOUD_TOKENS: app.terraform.io=${{ secrets.TF_API_TOKEN }}
         with:
           path: test-app
           workspace: samplews
+
+      - name: terraform plan
+        uses: dflook/terraform-plan@v1
+        with:
+          path: test-app
