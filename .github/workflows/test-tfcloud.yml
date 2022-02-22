@@ -6,6 +6,8 @@ jobs:
   terraform:
     name: "Terraform Cloud Test"
     runs-on: ubuntu-latest
+    env:
+      TERRAFORM_CLOUD_TOKENS: app.terraform.io=${{ secrets.TF_API_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -13,5 +15,5 @@ jobs:
       - name: Use branch workspace
         uses: dflook/terraform-new-workspace@v1
         with:
-          path: terraform
+          path: test-app
           workspace: samplews
