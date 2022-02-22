@@ -5,7 +5,7 @@ terraform {
     }
   }
   backend "remote" {
-    organization = "Ahead"
+    organization = "Ahead-Demo"
     
     workspaces {
       name = "samplews"
