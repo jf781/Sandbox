@@ -5,10 +5,10 @@ terraform {
     }
   }
   backend "remote" {
-    organization = "CourageAI"
+    organization = "Ahead"
     
     workspaces {
-      name = "CourageAI-Infrastructure"
+      name = "samplews"
     }
   }
 }
