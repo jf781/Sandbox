@@ -45,3 +45,5 @@ jobs:
             name = "jftestCluster"
             instanceSize = "t3.small"
             clusterVersion = "1.21"
+            access_key_id = "${{ secrets.AWS_ACCESS_KEY_ID }}"
+            access_key_secret = "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
