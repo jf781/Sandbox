@@ -12,16 +12,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use branch workspace
-        uses: dflook/terraform-new-workspace@v1
+      - name: "Create Workspace"
+        id: workspace
+        uses: recarnot/terraform-github-workspace-setup-action@master
         with:
-          path: test-app
-          workspace: samplews
+          organization: "AHEAD-Demo"
+          workspace: "samplews"
+          token: ${{ secrets.TF_API_TOKEN }}
+          vars: '
+            {
+              "key": "region",
+              "value": "eu-west-3",
+              "sensitive": "false"
+            },
+            {
+              "key": "access_key_id",
+              "value": "${{ secrets.AWS_ACCESS_KEY_ID }}",
+              "sensitive": "true"
+            },
+            {
+              "key": "access_key_secret",
+              "value": "${{ secrets.AWS_SECRET_ACCESS_KEY }}",
+              "sensitive": "true"
+            }
+          '
 
       - name: terraform plan
         uses: dflook/terraform-plan@v1
-        env: 
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         with:
           path: test-app
