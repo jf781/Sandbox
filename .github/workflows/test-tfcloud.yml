@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   terraform:
-    name: "Terraform Cloud Test"
+    name: "EKS Cluster"
     runs-on: ubuntu-latest
     env:
       TERRAFORM_CLOUD_TOKENS: app.terraform.io=${{ secrets.TF_API_TOKEN }}
@@ -41,3 +41,7 @@ jobs:
         with:
           path: terraform/eks
           auto_approve: true
+          variables: |
+            name: jftestCluster
+            instanceSize: t3.small
+            clusterVersion: 1.21
