@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TERRAFORM_CLOUD_TOKENS: app.terraform.io=${{ secrets.TF_API_TOKEN }}
+      AWS_ACCESS_KEY_ID: ${{ AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ AWS_SECRET_ACCESS_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -21,7 +23,4 @@ jobs:
       - name: terraform plan
         uses: dflook/terraform-@v1
         with:
-          vars: |
-            AWS_ACCESS_KEY_ID=${{ AWS_ACCESS_KEY_ID }}
-            AWS_SECRET_ACCESS_KEY=${{ AWS_SECRET_ACCESS_KEY }}
           path: test-app
