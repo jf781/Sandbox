@@ -20,8 +20,8 @@ jobs:
 
       - name: terraform plan
         uses: dflook/terraform-@v1
+        env: 
+          AWS_ACCESS_KEY_ID: ${{ AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ AWS_SECRET_ACCESS_KEY }}
         with:
-          vars: 
-            AWS_ACCESS_KEY_ID=${{ AWS_ACCESS_KEY_ID }}
-            AWS_SECRET_ACCESS_KEY=${{ AWS_SECRET_ACCESS_KEY }}
           path: test-app
