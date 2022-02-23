@@ -1,5 +1,7 @@
 provider "aws" {
-  region = var.region
+  region      = var.region
+  access_key  = var.access_key_id
+  secret_key  = var.access_key_secret
 }
 
 data "aws_availability_zones" "available" {}

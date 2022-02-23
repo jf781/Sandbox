@@ -18,3 +18,13 @@ variable "clusterVersion" {
   description = "Version of Kubernetes for cluster"
   type = string
 }
+
+variable "access_key_id" {
+  description = "AWS Access ID"
+  type = string
+}
+
+variable "access_key_secret" {
+  description = "AWS Access Secret"
+  type = string
+}
