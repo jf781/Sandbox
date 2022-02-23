@@ -42,7 +42,7 @@ jobs:
           path: terraform/eks
           auto_approve: true
           variables: |
-            name = "jftestCluster"
+            name = "jftestcluster"
             instanceSize = "t3.small"
             clusterVersion = "1.21"
             access_key_id = "${{ secrets.AWS_ACCESS_KEY_ID }}"
