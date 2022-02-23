@@ -17,6 +17,11 @@ jobs:
         with:
           path: test-app
           workspace: samplews
-          backend_config: |
+
+      - name: terraform plan
+        uses: dflook/terraform-@v1
+        with:
+          vars: |
             AWS_ACCESS_KEY_ID=${{ AWS_ACCESS_KEY_ID }}
             AWS_SECRET_ACCESS_KEY=${{ AWS_SECRET_ACCESS_KEY }}
+          path: test-app
