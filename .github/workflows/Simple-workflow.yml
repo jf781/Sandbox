@@ -27,5 +27,5 @@ jobs:
         echo "${{ inputs.tags }}"
         echo "The Business Unit tag is: ${{ fromJSON(inputs.tags).businessunit}}"
         echo "The Cost Center tag is: ${{ fromJSON(inputs.tags).costcenter}}"
-        tagQuantity=$(echo ${{ inputs.tags }}" | jq length )
+        tagQuantity=$(echo ${{ inputs.tags }} | jq length )
         echo $tagQuantity
