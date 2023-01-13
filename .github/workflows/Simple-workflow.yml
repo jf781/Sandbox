@@ -23,5 +23,7 @@ jobs:
     - run: |
         echo "Hello ${{ inputs.name }}"
         echo "I see your favorite color is ${{ inputs.color }}.  OMGoodness, that's mine too!"
-        echo "Here is a list of the tags defined"
+        echo "Here is a list of the tags defined:"
         echo "${{ inputs.tags }}"
+        echo "The Business Unit tag is: ${{ fromJson(inputs.tags).businessunit}}""
+        echo "The Cost Center tag is: ${{ fromJson(inputs.tags).costcenter}}"
