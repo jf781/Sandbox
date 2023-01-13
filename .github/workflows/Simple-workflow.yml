@@ -16,5 +16,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Hello ${{ input_name }}"
-        echo "I see your favorite color is ${{ input_color }}.  OMGoodness, that's mine too!"
+        echo "Hello ${{ inputs.name }}"
+        echo "I see your favorite color is ${{ inputs.color }}.  OMGoodness, that's mine too!"
