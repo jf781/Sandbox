@@ -1,0 +1,20 @@
+name: Manually triggered workflow
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name'
+        required: true
+        default: 'Joe'
+      home:
+        description: 'Favorite Color'
+        required: false
+        default: 'Mother of pearl'
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Hello $!"
+        echo "I see your favorite color is $!.  That's mine too!"
