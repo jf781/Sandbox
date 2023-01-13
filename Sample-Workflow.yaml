@@ -17,4 +17,4 @@ jobs:
     steps:
     - run: |
         echo "Hello $!"
-        echo "I see your favorite color is $!.  That's mine too!"
+        echo "I see your favorite color is $!.  OMGoodness, that's mine too!"
