@@ -10,6 +10,11 @@ on:
         description: 'Favorite Color'
         required: false
         default: 'Mother of pearl'
+      tags:
+        description: 'JSON to define tags'
+        required: false
+        default: '{}'
+
 
 jobs:
   say_hello:
@@ -18,3 +23,5 @@ jobs:
     - run: |
         echo "Hello ${{ inputs.name }}"
         echo "I see your favorite color is ${{ inputs.color }}.  OMGoodness, that's mine too!"
+        echo "Here is a list of the tags defined"
+        echo "${{ inputs.tags }}"
