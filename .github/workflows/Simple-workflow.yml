@@ -27,6 +27,7 @@ jobs:
         echo "${{ inputs.tags }}"
         echo "The Business Unit tag is: ${{ fromJSON(inputs.tags).businessunit}}"
         echo "The Cost Center tag is: ${{ fromJSON(inputs.tags).costcenter}}"
+        echo "The Day of the week tag is: ${{ fromJSON(inputs.tags).DayOfWeek}}"
         tags='${{ inputs.tags }}'
         tagQuantity=$(echo $tags | jq length )
-        echo $tagQuantity
+        echo "There are $tagQuantity tags defined"
