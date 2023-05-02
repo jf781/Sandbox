@@ -12,3 +12,4 @@ jobs:
       run: |
         echo "Validating code"
         echo "Code is valid"
+        exit 1
