@@ -11,7 +11,6 @@ https://github.com/marketplace/actions/terraform-cloud-action?version=v2
 
 Example Query
 
-
 ```bash
 pat='--- Enter your GitHub Personal Access Token ---'
 
@@ -24,8 +23,6 @@ curl \
 
 ```
 
-
-46876596
 
 
 
