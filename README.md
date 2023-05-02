@@ -65,9 +65,6 @@ else
   repo_exists="false"
 fi 
 
-export TF_TOKEN_app_terraform_io='aD2hJV76W8VMcA.atlasv1.gD0wLVMyZYyVP2KAwgLdXi9btz5jYmEDFJcyy3Xt6w8YL6oApqmhjpIzGv5fP6HSzwk'
-
-tfpat='aD2hJV76W8VMcA.atlasv1.gD0wLVMyZYyVP2KAwgLdXi9btz5jYmEDFJcyy3Xt6w8YL6oApqmhjpIzGv5fP6HSzwk'
 
 
 
